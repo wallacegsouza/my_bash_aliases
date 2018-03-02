@@ -10,3 +10,11 @@ alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(
 
 # Delete all stopped containers and untagged images.
 alias dockerclean='dockercleanc || true && dockercleani'
+
+# Clears all characters on the screen
+alias cls='printf "\033c"'
+
+# To make life easier in git
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias glog='git log --graph --pretty=oneline --abbrev-commit'
