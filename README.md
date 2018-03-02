@@ -22,6 +22,8 @@ Documentação
 
 Para utilizar os comandos basta fechar e abrir o terminal, caso você esteja com seu terminal aberto. Os comandos são:
 
+#### DOCKER
+
 "Matar" todos os containers
 
 ```bash
@@ -43,6 +45,74 @@ Deleta todos os containers parado e deleta todas as images sem tag.
 dockerclean
 ```
 
+Parar os containers ( docker stop $(docker ps -aq) )
+
+```bash
+ dockerstop
+```
+
+Remover todas as imagens
+
+```bash
+ dockerrmiall
+```
+
+Remover tudo ( CONTAINERS IMAGE, VOLUME, NETWORK) **CUIDADO COM ESSE COMANDO** **Você sabe o que está fazendo ne?**
+
+docker rm -f $(docker ps -a -q) && docker rmi -f $(docker images -q) && docker volume prune -f && docker network prune -f
+
+O comando faz na força bruta a parada dos containers e remove tudo na força bruta. [ CUIDADO!!!!!]
+
+```bash
+dockerdeadcommand
+```
+
+#### DOCKER-COMPOSE
+
+Subir uma aplicação com docker-compose up
+
+```bash
+  dcup
+```
+
+Contruir o container a partir do Dockerfile e docker-compose.yml: ( docker-compose build )
+
+```bash
+  dcbuild
+```
+
+Executar um determinado container e depois de utilizar remover: docker-compose run --rm 
+
+```bash
+  dcrun
+```
+
+Derrubar toda estrutura do container atual: docker-compose down
+
+```bash
+ dcdown
+```
+
+#### GIT
+
+Mudar de branch (git checkout [ NOME DA BRANCH ])
+
+```bash
+gc
+```
+
+Criar uma nova branch ( git checkout -b [ NOME DA BRANCH ])
+
+```
+ gcb
+```
+
+Visualizar os logs com gráfico e em uma linha ( git log --graph --pretty=oneline --abbrev-commit )
+
+```
+glog
+
+```
 
 ### Links diretos
 
