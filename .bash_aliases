@@ -26,3 +26,7 @@ alias cls='printf "\033c"'
 alias gc='git checkout'
 alias gcb='git checkout -b'
 alias glog='git log --graph --pretty=oneline --abbrev-commit'
+
+# Spring Boot
+
+alias bootrt='gradle bootRun -Pjenv=test'

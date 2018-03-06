@@ -29,16 +29,19 @@ Para utilizar os comandos basta fechar e abrir o terminal, caso você esteja com
 ```bash
 dockerkillall
 ```
+
 Deletando os containers parados:
 
 ```bash
 dockercleanc
 ```
+
 Deleta todas as images sem tag
 
 ```bash
 dockercleani
 ```
+
 Deleta todos os containers parado e deleta todas as images sem tag.
 
 ```bash
@@ -103,14 +106,23 @@ gc
 
 Criar uma nova branch ( git checkout -b [ NOME DA BRANCH ])
 
-```
+```bash
  gcb
 ```
 
 Visualizar os logs com gráfico e em uma linha ( git log --graph --pretty=oneline --abbrev-commit )
 
-```
+```bash
 glog
+
+```
+
+### Spring Boot
+
+Executar uma projeto spring boot usando gradle com a prop jenv=test( gradle bootRun -Pjenv=test )
+
+```bash
+bootrt
 
 ```
 
